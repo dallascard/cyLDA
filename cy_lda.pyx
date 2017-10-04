@@ -83,7 +83,7 @@ class LDA:
                 max_iter_e_step *= 2
 
             # check for convergence
-            if delta > 0 and delta < tolerance and (i+1) >= max_epochs:
+            if (delta > 0 and delta < tolerance) or (i+1) >= max_epochs:
                 break
 
             if vocab is not None and display_topics:
